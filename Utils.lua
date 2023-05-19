@@ -10,18 +10,18 @@ function api.split(inputstr, sep)
     return t
 end
 api.table = {}
-function api.table.includes(table,thing)
+function api.table.includes(table,item)
   for k,v in pairs(table) do
-      if v == thing then
+      if v == item then
           return true
       end
   end
   return false
 end
 
-function api.table.indexOf(table,thing)
+function api.table.indexOf(table,item)
   for k,v in pairs(table) do
-      if v == thing then
+      if v == item then
           return k
       end
   end
