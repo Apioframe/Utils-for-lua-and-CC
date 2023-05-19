@@ -1,4 +1,5 @@
-function split(inputstr, sep)
+api = {}
+function api.split(inputstr, sep)
     if sep == nil then
        sep = "%s"
     end
@@ -8,8 +9,8 @@ function split(inputstr, sep)
     end
     return t
 end
-
-function includes(table,thing)
+api.table = {}
+function api.table.includes(table,thing)
   for k,v in pairs(table) do
       if v == thing then
           return true
@@ -18,7 +19,7 @@ function includes(table,thing)
   return false
 end
 
-function indexOf(table,thing)
+function api.table.indexOf(table,thing)
   for k,v in pairs(table) do
       if v == thing then
           return k
@@ -27,10 +28,11 @@ function indexOf(table,thing)
   return nil
 end
 
-function avarage(table)
+function api.avarage(table)
     local sum = 0
     for k,v in ipairs(table) do
       sum = sum + v
     end
     return sum / #table
 end
+return api
